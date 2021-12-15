@@ -1,40 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="../../../seguridad/identificacion/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<!--<img class="wave" src="/FrontendAngular41/src/assets/images/wave.png">            		   			<input formControlName="usuario" id="email" type="email" class="validate">-->
+	<div class="container">
+		<div class="img">
+			<img src="/FrontendAngular41/src/assets/images/black_car.svg">
+		</div>
+		
+			<div class="login-content">
+				<form [formGroup]="fgValidador" (ngSubmit)="IdentidicarUsuario()">
+					<img src="/FrontendAngular41/src/assets/images/undraw_profile_pic_ic-5-t.svg">
+					<h2 class="title">Bienvenido</h2>
+           			<div class="input-div one">
+           		   		<div class="i">
+                      <i class="fas fa-envelope"></i>
+           		   		</div>
+           		   		<div class="div">
+           		   			<h5>Correo electronico</h5>
+           		   			<input formControlName="email" id="email" type="email" class="validate">
+           		   		</div>
+           			</div>
+           			<div class="input-div pass">
+           		   		<div class="i"> 
+           		    		<i class="fas fa-lock"></i>
+           		   		</div>
+           		   		<div class="div">
+           		    		<h5>Contraseña</h5>
+							        <input formControlName="clave" id="password" type="password" class="validate">
+            	   		</div>
+            		</div>
+                <div class="input-div one">
+                  <div class="i">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="div">
+                    <h5>Nombre Completo</h5>
+                    <input formControlName="name" id="name" type="name" class="validate">
+                  </div>
+                </div>
+                <div class="input-div one">
+                  <div class="i">
+                    <i class="fas fa-mobile"></i>
+                  </div>
+                  <div class="div">
+                    <h5>Celular</h5>
+                    <input formControlName="celular" id="celular" type="celular" class="validate">
+                  </div>
+                </div>
 
-  <div class="container">
-    <form class="row g-3 needs-validation" novalidate>
-      <div class="col-md-6">
-        <label for="txtNombres" class="form-label">Nombres</label>
-        <input type="text" class="form-control" id="txtNombres" required>
-        <div class="invalid-feedback">
-         El nombre es obligatorio
-        </div>
-      </div>
-      <div class="col-md-6">
-        <label for="txtApellidos" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="txtApellidos" required>
-        <div class="invalid-feedback">
-          Los apellidos son obligatorios
-        </div>
-      </div>
-      <div class="col-md-8">
-        <label for="txtCorreo" class="form-label">Correo Electronico</label>
-        <div class="input-group has-validation">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-          <input type="email" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
-            El correo electronico es obligatorio
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label for="txtCelular" class="form-label">Celular</label>
-        <input type="number" class="form-control" id="txtCelular" required>
-        <div class="invalid-feedback">
-          El numero celular es obligatorio
-        </div>
-      </div>
-      
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit">Registrar Usuario</button>
-      </div>
-    </form>
-</div>
+                <div class="input-div one">
+                  <div class="i">
+                    <i class="fas fa-id-card"></i>
+                  </div>
+                  <div class="div">
+                    <h5>Documento de identidad</h5>
+                    <input formControlName="celular" id="celular" type="celular" class="validate">
+                  </div>
+                </div>
+               
+                <div class="input-div one">
+                  <div class="i">
+                    <i class="fas fa-city"></i>
+                  </div>
+                  <div class="div">
+                    <h5>Ciudad</h5>
+                    <input formControlName="ciudad" id="ciudad" type="ciudad" class="validate">
+                  </div>
+                </div>
+                          
+					<br>
+					<a href="../../../seguridad/identificacion/identificacion.component.html">¿Ya te encuentras registrado? Ingresa aquí</a>
+            		<!--<input type="submit" class="btn" value="Iniciar sesion">-->
+					<button [disabled]="!fgValidador.valid" type="submit" class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12">Iniciar Sesión</button>
+					
+           		</form>
+        	</div>
+		</form>
+    </div>
+    <script type="text/javascript" src="../../../seguridad/identificacion/js/main.js"></script>
+</body>
+</html>  

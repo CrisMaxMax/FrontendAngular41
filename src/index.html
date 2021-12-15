@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 
-    <title>RENT MOVIL</title>
+    <title>Renta de Autos</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -31,30 +31,29 @@
     
     <!-- css estilos -->
     <link href="carousel.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
     
 <header>
   <nav class="navbar navbar-expand-md navbar-white fixed-top bg-white">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#" style = "color: #371979; font-size: 22px;"> <strong> Rent Movil </strong> </a>
+      <div class="imgLogo">
+        <p><img src ="/FrontendAngular41/src/assets/images/logo.jpeg" alt="Logotipo de logo.jpeg" width="225" height="55"></p>
+    </div>
+      <!--<a class="navbar-brand" href="#" style = "color: #371979; font-size: 22px;"> <strong> Rent Movil </strong> </a>-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
       
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <!--<li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Mis pedidos</a>
-          </li>-->
+
           <li class="nav-item">
-            <a class="nav-link" href="#" style = "color: #444; font-size: 16px;">Mis pedidos</a>
+            <a class="nav-link" href="app/modulos/seguridad/identificacion/identificacion.component.html" style = "color: rgb(0, 0, 0); font-size: 16px;">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="app/modulos/seguridad/identificacion/identificacion.component.html" style = "color: #444; font-size: 16px;">Iniciar Sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="app/modulos/administracion/usuarios/crear-usuario/crear-usuario.component.html"style = "color: #444; font-size: 16px;">Registrarme</a>
+            <a class="nav-link" href="app/modulos/administracion/usuarios/crear-usuario/crear-usuario.component.html"style = "color: rgb(0, 0, 0); font-size: 16px;">Registrarme</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -76,10 +75,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <img src ="assets/images/car2.png" >
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#270570"/></svg>
 
         <div class="container">
+          
           <div class="carousel-caption text-start">
+            
             <h1>Conoce nuestra flota.</h1>
             <p> Renta un automóvil y paga con tu tarjeta de crédito. ¡Rápido y seguro!</p>
             <p><a class="btn btn-lg btn-primary" href="#"><strong> Conoce más</strong></a></p>
@@ -87,6 +89,7 @@
         </div>
       </div>
       <div class="carousel-item">
+        <img src ="assets/images/blackcar.jpg" >
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#270570"/></svg>
 
         <div class="container">
@@ -98,6 +101,7 @@
         </div>
       </div>
       <div class="carousel-item">
+        <img src ="assets/images/city.jpg" >
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#270570"/></svg>
 
         <div class="container">
@@ -128,28 +132,32 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
+      
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <img src="assets/images/mastercard.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         <br>
         <h2> Paga tu viaje en cuotas y no te preocupes por más</h2>
         <p>Descubre promociones bancarias y nuestros métodos de pago</p>
-        
         <p><a class="btn btn-secondary" href="#"> Ver detalles &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
+
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <!--<img src ="assets/images/mastercard.jpg">-->
+        <img src="assets/images/sales.png" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         <br>
         <h2> Recibe ofertas y descubre el mundo </h2>
         <p> ¡No te pierdas de nada, descarga gratis nuestra app y descubre ofertas para tu próximo destino!</p>
         <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
+
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <img src="assets/images/turismo.png" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         <br>
         <h2>Descubre actividades en tu ciudad favorita</h2>
         <p>¡Aqui podras encontrar que actividades podras realizar en tu destino para que no te pierdas de nada!</p>
         <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
+
     </div><!-- /.row -->
 
 
@@ -159,11 +167,11 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">x<span class="text-muted">X</span></h2>
-        <p class="lead">x</p>
+        <h2 class="featurette-heading">Acerca de<span class="text-muted"> Rent Movil</span></h2>
+        <p class="lead">Somos una empresa dedicada al alquiler de autos y venta de servicios turisticos en Colombia. Con más de 10 años en el mercado, acompañando a las personas de cumplir su sueño de viajar y compartir sus mejores momentos con sus familiares y amigos. </p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="assets/images/city2.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></svg>
 
       </div>
     </div>
@@ -172,11 +180,11 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">y<span class="text-muted">Y</span></h2>
-        <p class="lead">X</p>
+        <h2 class="featurette-heading">Beneficios de alquilar un<span class="text-muted"> auto</span></h2>
+        <p class="lead">Siente la libertad que te da conocer una ciudad al estar detrás del volante. Con rent movil puedes tomar las riendas de tu tiempo y armar tu propio itinerario para recorrer y conocer todo lo que quieras.</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="assets/images/drive.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></svg>
 
       </div>
     </div>
@@ -185,22 +193,18 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">aaa<span class="text-muted">A.</span></h2>
-        <p class="lead">t</p>
+        <h2 class="featurette-heading">¿Qué debes tener en cuenta al momento de alquilar<span class="text-muted"> un automovil?</span></h2>
+        <p class="lead">Antes de alquilar un carro, ten en cuenta el número de pasajeros que serán en el viaje. Esto te ayudará a decidir el tamaño del carro. Además, presta atención a los seguros que están incluidos en el contrato de alquiler, así como los beneficios de kilometraje ilimitado, tipo de caja y modalidad de entrega del vehículo.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="assets/images/pexels-kelvin-valerio-1519192.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></svg>
 
       </div>
     </div>
 
     <hr class="featurette-divider">
-
     <!-- /END THE FEATURETTES -->
-
   </div><!-- /.container -->
-
-
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>

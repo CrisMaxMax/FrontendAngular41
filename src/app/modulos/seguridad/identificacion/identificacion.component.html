@@ -8,38 +8,43 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<!--<img class="wave" src="/FrontendAngular41/src/assets/images/wave.png">-->
+	<!--<img class="wave" src="/FrontendAngular41/src/assets/images/wave.png">            		   			<input formControlName="usuario" id="email" type="email" class="validate">-->
 	<div class="container">
 		<div class="img">
 			<img src="/FrontendAngular41/src/assets/images/off_road.svg">
 		</div>
-		<div class="login-content">
-			<form action="index.html">
-				<img src="/FrontendAngular41/src/assets/images/welcome.svg">
-				<h2 class="title">Bienvenido</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Usuario</h5>
-           		   		<input type="text" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Contraseña</h5>
-           		    	<input type="password" class="input">
-            	   </div>
-            	</div>
-            	<a href="#">Olvidaste tu contraseña?</a>
-            	<input type="submit" class="btn" value="Login">
-            </form>
-        </div>
+		
+			<div class="login-content">
+				<form [formGroup]="fgValidador" (ngSubmit)="IdentidicarUsuario()">
+					<img src="/FrontendAngular41/src/assets/images/welcome.svg">
+					<h2 class="title">Bienvenido</h2>
+           			<div class="input-div one">
+           		   		<div class="i">
+           		   			<i class="fas fa-user"></i>
+           		   		</div>
+           		   		<div class="div">
+           		   			<h5>Usuario</h5>
+           		   			<input formControlName="usuario" id="email" type="email" class="validate">
+           		   		</div>
+           			</div>
+           			<div class="input-div pass">
+           		   		<div class="i"> 
+           		    		<i class="fas fa-lock"></i>
+           		   		</div>
+           		   		<div class="div">
+           		    		<h5>Contraseña</h5>
+							<input formControlName="clave" id="password" type="password" class="validate">
+            	   		</div>
+            		</div>
+					<br>
+            		<a href="#">Olvidaste tu contraseña?</a>
+					<a href="../../administracion/usuarios/crear-usuario/crear-usuario.component.html">¿Aún no tienes cuenta? Registrate!</a>
+            		<!--<input type="submit" class="btn" value="Iniciar sesion">-->
+					<button [disabled]="!fgValidador.valid" type="submit" class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12" >Iniciar Sesión</button>
+					
+           		</form>
+        	</div>
+		</form>
     </div>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
-</html>

@@ -1,25 +1,158 @@
-<div class="row">
-    <h3 class="center-aling">Crear Productos</h3>
-    <article class="col s6 offset-s3">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../../../../app/modulos/seguridad/identificacion/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="description" content="">
 
-        <form [formGroup]="fgValidador" (ngSubmit)="GuardarPoducto()">
-            <div class="input-field">
-                <label for="nombre">Nombre</label>
-                <input formControlName="nombre" type="text" name="nombre" required>
-            </div>
-            <div class="input-field">
-                <label for="precio">Precio</label>
-                <input formControlName="precio" type="text" name="precio" required>
-            </div>
-            <div class="input-field">
-                <label for="imagen">Imagen</label>
-                <input formControlName="imagen" type="text" name="imagen" required>
-            </div>
-            <p class="center">
-                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
-                    <i class="material-icons right">send</i>Enviar
-                </button>
-            </p>
-        </form>
-    </article>
-</div>
+    <title>Renta de Autos</title>
+
+
+  <!-- Bootstrap core CSS assets/dist/css/bootstrap.min.css-->
+    
+<link href="../../../../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- css estilos -->
+    <!--<link href="carousel.css" rel="stylesheet">-->
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-white fixed-top bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style = "color: #371979; font-size: 22px;"> <strong> Rent Movil </strong> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+      
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../../administracion.component.html">Panel de administración</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../buscar-producto/buscar-producto.component.html" style = "color: #444; font-size: 16px;">Buscar Vehiculos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../crear-producto/crear-producto.component.html" style = "color: #444; font-size: 16px;">Crear Vehiculos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../editar-producto/editar-producto.component.html"style = "color: #444; font-size: 16px;">Editar Vehiculos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../eliminar-producto/eliminar-producto.component.html"style = "color: #444; font-size: 16px;">Eliminar Vehiculos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+    <div class="container">
+		<div class="img">
+			<img src="/FrontendAngular41/src/assets/images/city_driver.svg">
+		</div>
+		
+			<div class="login-content">
+				<form [formGroup]="fgValidador" (ngSubmit)="GuardarProducto()">
+					<!--<img src="/FrontendAngular41/src/assets/images/welcome.svg">-->
+					<h3 class="title">Ingresar Vehiculo</h2>
+           			<div class="input-div one">
+           		   		<div class="i">
+                            <i class="far fa-calendar"></i>
+                    </div>
+           		   		<div class="input-field">
+                            <br>
+                            <h5>Modelo</h5>
+           		   			<input formControlName="modelo" type="text" name="modelo" required>
+           		   		</div>
+           			</div>
+                                       
+           			<div class="input-div pass">
+           		   		<div class="i"> 
+                            <i class="fas fa-signature"></i>
+           		   		</div>
+           		   		<div class="div">
+           		    		<h5>Marca</h5>
+							<input formControlName="marca" type="text" name="marca" required>
+            	   		</div>
+            		</div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="far fa-id-badge"></i>
+                        </div>
+                        <div class="div">
+                         <h5>Placa</h5>
+                      <input formControlName="placa" type="text" name="placa" required>
+                     </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="div">
+                         <h5>Tipo de vehiculo</h5>
+                      <input formControlName="tipo_de_vehiculo" type="text" name="tipo_de_vehiculo" required>
+                     </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <div class="div">
+                         <h5>Ciudad</h5>
+                      <input formControlName="ciudad" type="text" name="ciudad" required>
+                     </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-photo-video"></i>
+                        </div>
+                        <div class="div">
+                         <h5>Imagen</h5>
+                         <input formControlName="imagen" type="POST" name="imagen" enctype="multipart/formdata" required>
+                         <input type ="file" name="imagen">
+                         <!--<input type="submit" name="subir-imagen" value="Enviar imagen" />-->
+                     </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="div">
+                         <h5>Departamento</h5>
+                      <input formControlName="departamento" type="text" name="departamento" required>
+                     </div>
+                    </div>
+					<br>
+					<button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                        <i class="material-icons right">Enviar</i>
+                    </button>
+           		</form>
+        	</div>
+		</form>
+    </div>
+    <script type="text/javascript" src="../../../../../app/modulos/seguridad/identificacion/js/main.js"></script>
+</body>

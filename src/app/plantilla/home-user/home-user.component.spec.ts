@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterNavegacionComponent } from './footer-navegacion.component';
+import { HomeUserComponent } from './home-user.component';
 
-describe('FooterNavegacionComponent', () => {
-  let component: FooterNavegacionComponent;
-  let fixture: ComponentFixture<FooterNavegacionComponent>;
+describe('HomeUserComponent', () => {
+  let component: HomeUserComponent;
+  let fixture: ComponentFixture<HomeUserComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterNavegacionComponent ]
+      declarations: [ HomeUserComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterNavegacionComponent);
+    fixture = TestBed.createComponent(HomeUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

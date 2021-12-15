@@ -1,3 +1,17 @@
 .imagenProducto{
     width: 100px;
 }
+
+.container{
+    margin-left: 30px;
+   
+}
+
+.btn {
+    margin-right: 30px;
+    border-color: #000000;
+   border-width: 1px;
+   border-style: solid;
+   text-align: center;
+}
+

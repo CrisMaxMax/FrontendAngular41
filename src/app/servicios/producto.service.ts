@@ -18,15 +18,15 @@ export class ProductoService {
    }
 
    ObtenerRegistros(): Observable<ModelProducto[]>{
-     return this.http.get<ModelProducto[]>(`${this.url}/productos`);
+     return this.http.get<ModelProducto[]>(`${this.url}/vehiculos`);
    }
 
-   ObtenerRegistrosPorId(id: string): Observable<ModelProducto>{
-    return this.http.get<ModelProducto>(`${this.url}/productos/${id}`);
+   ObtenerRegistrosPorId(id_vehiculo: string): Observable<ModelProducto>{
+    return this.http.get<ModelProducto>(`${this.url}/vehiculos/${id_vehiculo}`);
    }
 
    CrearProducto(producto: ModelProducto): Observable<ModelProducto>{
-     return this.http.post<ModelProducto>(`${this.url}/productos`, producto,{
+     return this.http.post<ModelProducto>(`${this.url}/vehiculos`, producto,{
        headers: new HttpHeaders({
          'Authorization': `Bearer ${this.token}`
        })
@@ -34,15 +34,15 @@ export class ProductoService {
    }
 
    ActualizarProducto(producto: ModelProducto): Observable<ModelProducto>{
-     return this.http.put<ModelProducto>(`${this.url}/productos/${producto.id}`, producto,{
+     return this.http.put<ModelProducto>(`${this.url}/vehiculos/${producto.id_vehiculo}`, producto,{
         headers: new HttpHeaders({
           'Authorization': `Bearer${this.token}`
         })
      })
    }
    
-   EliminarProducto(id: string): Observable<any>{
-     return this.http.delete(`${this.url}/productos/${id}`,{
+   EliminarProducto(id_vehiculo: string): Observable<any>{
+     return this.http.delete(`${this.url}/vehiculos/${id_vehiculo}`,{
        headers: new HttpHeaders({
         'Authorization': `Bearer${this.token}`
        })
