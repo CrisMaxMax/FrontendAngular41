@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../../../../app/modulos/seguridad/identificacion/css/style.css">
+	  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="description" content="">
+
+    <title>Renta de Autos</title>
+
+
+    
+    
+<link href="../../../../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="buscar-producto.component.css" rel="stylesheet" >
+<link href="carousel.css" rel="stylesheet">-->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-white fixed-top bg-white">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" style = "color: #000000; font-size: 22px;"> <strong> Rent Movil </strong> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../../administracion.component.html">Panel de administración</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../buscar-producto/buscar-producto.component.html" style = "color: #000000; font-size: 16px;">Buscar Vehiculos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../crear-producto/crear-producto.component.html" style = "color: #000000; font-size: 16px;">Crear Vehiculos</a>
+                </li>
+
+               
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <br><br><br><br>
+
+        <div class="container">
+            <table class="table responsive">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Placa</th>
+                        <th>Tipo de vehiculo</th>
+                        <th>Imagen</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of listadoRegistros">
+                        <td>{{p.modelo}}</td>
+                        <td>{{p.marca}}</td>
+                        <td>{{p.placa}}</td>
+                        <td>{{p.tipo_de_vehiculo}}</td>
+                        <td>
+                          <img src="{{p.imagen}}" class="imagenProducto" />
+                      </td>
+                      <td>
+                        <a href="../editar-producto/editar-producto.component.html"  class="btn">Editar Producto</a>
+                    </td>
+                    <td>
+                      <a class="btn">Eliminar producto</a>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            </div>
+      </header>
+      

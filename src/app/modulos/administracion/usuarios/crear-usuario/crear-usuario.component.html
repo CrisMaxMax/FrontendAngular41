@@ -11,20 +11,20 @@
 	<!--<img class="wave" src="/FrontendAngular41/src/assets/images/wave.png">            		   			<input formControlName="usuario" id="email" type="email" class="validate">-->
 	<div class="container">
 		<div class="img">
-			<img src="/FrontendAngular41/src/assets/images/black_car.svg">
+			<img src="/FrontendAngular41/src/assets/images/off_road.svg">
 		</div>
 		
 			<div class="login-content">
 				<form [formGroup]="fgValidador" (ngSubmit)="IdentidicarUsuario()">
-					<img src="/FrontendAngular41/src/assets/images/undraw_profile_pic_ic-5-t.svg">
-					<h2 class="title">Bienvenido</h2>
+					<img src="/FrontendAngular41/src/assets/images/welcome.svg">
+					<h2 class="title">Registro de asesores</h2>
            			<div class="input-div one">
            		   		<div class="i">
-                      <i class="fas fa-envelope"></i>
+           		   			<i class="fas fa-user"></i>
            		   		</div>
            		   		<div class="div">
-           		   			<h5>Correo electronico</h5>
-           		   			<input formControlName="email" id="email" type="email" class="validate">
+           		   			<h5>Usuario</h5>
+           		   			<input formControlName="usuario" id="email" type="email" class="validate">
            		   		</div>
            			</div>
            			<div class="input-div pass">
@@ -33,57 +33,16 @@
            		   		</div>
            		   		<div class="div">
            		    		<h5>Contraseña</h5>
-							        <input formControlName="clave" id="password" type="password" class="validate">
+							<input formControlName="clave" id="password" type="password" class="validate">
             	   		</div>
             		</div>
-                <div class="input-div one">
-                  <div class="i">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <div class="div">
-                    <h5>Nombre Completo</h5>
-                    <input formControlName="name" id="name" type="name" class="validate">
-                  </div>
-                </div>
-                <div class="input-div one">
-                  <div class="i">
-                    <i class="fas fa-mobile"></i>
-                  </div>
-                  <div class="div">
-                    <h5>Celular</h5>
-                    <input formControlName="celular" id="celular" type="celular" class="validate">
-                  </div>
-                </div>
-
-                <div class="input-div one">
-                  <div class="i">
-                    <i class="fas fa-id-card"></i>
-                  </div>
-                  <div class="div">
-                    <h5>Documento de identidad</h5>
-                    <input formControlName="celular" id="celular" type="celular" class="validate">
-                  </div>
-                </div>
-               
-                <div class="input-div one">
-                  <div class="i">
-                    <i class="fas fa-city"></i>
-                  </div>
-                  <div class="div">
-                    <h5>Ciudad</h5>
-                    <input formControlName="ciudad" id="ciudad" type="ciudad" class="validate">
-                  </div>
-                </div>
-                          
 					<br>
-					<a href="../../../seguridad/identificacion/identificacion.component.html">¿Ya te encuentras registrado? Ingresa aquí</a>
-            		<!--<input type="submit" class="btn" value="Iniciar sesion">-->
-					<button [disabled]="!fgValidador.valid" type="submit" class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12">Iniciar Sesión</button>
+
+					<button [disabled]="!fgValidador.valid" type="submit" class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12" >Registrar</button>
 					
            		</form>
         	</div>
 		</form>
     </div>
-    <script type="text/javascript" src="../../../seguridad/identificacion/js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
-</html>  
